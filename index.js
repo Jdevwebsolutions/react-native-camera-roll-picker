@@ -54,7 +54,8 @@ class CameraRollPicker extends Component {
     super(props);
 
     this.state = {
-      images: [],
+      
+      images: images.unshift('hello'),
       selected: this.props.selected,
       lastCursor: null,
       initialLoading: true,
@@ -155,8 +156,8 @@ class CameraRollPicker extends Component {
 
     this.setState({
       selected,
-      this.state.images.unshift('hello');
       data: nEveryRow(this.state.images, imagesPerRow),
+      
     });
 
     callback(selected, image);
@@ -237,7 +238,7 @@ class CameraRollPicker extends Component {
         initialNumToRender={initialNumToRender}
         onEndReached={this.onEndReached}
         renderItem={({ item }) => this.renderRow(item)}
-        keyExtractor={item => item[0].node.image.uri}
+        keyExtractor={item => item[1].node.image.uri}
         data={this.state.data}
         extraData={this.state.selected}
       />
@@ -288,7 +289,7 @@ CameraRollPicker.propTypes = {
 CameraRollPicker.defaultProps = {
   initialNumToRender: 5,
   groupTypes: 'SavedPhotos',
-  maximum: 15,
+  maximum: 70,
   imagesPerRow: 3,
   imageMargin: 5,
   selectSingleItem: false,
