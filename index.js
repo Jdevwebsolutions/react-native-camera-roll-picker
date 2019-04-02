@@ -31,7 +31,7 @@ const nEveryRow = (data, n) => {
   const result = [];
   let temp = [];
 
-  for (let i = 1; i < data.length; ++i) {
+  for (let i = 0; i < data.length; ++i) {
     if (i > 0 && i % n === 0) {
       result.push(temp);
       temp = [];
@@ -39,7 +39,7 @@ const nEveryRow = (data, n) => {
     temp.push(data[i]);
   }
 
-  if (temp.length > 1) {
+  if (temp.length > 0) {
     while (temp.length !== n) {
       temp.push(null);
     }
