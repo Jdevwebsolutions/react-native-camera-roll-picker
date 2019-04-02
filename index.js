@@ -45,7 +45,7 @@ const nEveryRow = (data, n) => {
     }
     result.push(temp);
   }
-
+result.unshift("x");
   return result;
 };
 
