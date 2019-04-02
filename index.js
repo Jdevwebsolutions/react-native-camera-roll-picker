@@ -238,7 +238,7 @@ class CameraRollPicker extends Component {
         initialNumToRender={initialNumToRender}
         onEndReached={this.onEndReached}
         renderItem={({ item }) => this.renderRow(item)}
-        keyExtractor={item => item[1].node.image.uri}
+        keyExtractor={item => item[0].node.image.uri}
         data={this.state.data}
         extraData={this.state.selected}
       />
