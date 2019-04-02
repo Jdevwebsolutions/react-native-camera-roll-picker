@@ -28,7 +28,7 @@ class ImageItem extends Component {
     var marker = selectedMarker ? selectedMarker :
       <Image
         style={[styles.marker, { width: 25, height: 25 }]}
-        source={require('../../Assets/Icons/t1.png')}
+        source={require('../../Assets/Icons/t2.png')}
       />;
 
     var image = item.node.image;
