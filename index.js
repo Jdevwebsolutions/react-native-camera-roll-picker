@@ -31,7 +31,7 @@ const nEveryRow = (data, n) => {
   const result = [];
   let temp = [];
 
-  for (let i = 0; i < data.length; ++i) {
+  for (let i = 1; i < data.length; ++i) {
     if (i > 0 && i % n === 0) {
       result.push(temp);
       temp = [];
@@ -39,7 +39,7 @@ const nEveryRow = (data, n) => {
     temp.push(data[i]);
   }
 
-  if (temp.length > 0) {
+  if (temp.length > 1) {
     while (temp.length !== n) {
       temp.push(null);
     }
@@ -143,11 +143,11 @@ class CameraRollPicker extends Component {
     const { selected } = this.state;
     const index = arrayObjectIndexOf(selected, 'uri', image.uri);
 
-    if (index > 0) {
+    if (index >= 0) {
       selected.splice(index, 1);
     } else {
       if (selectSingleItem) {
-        selected.splice(1, selected.length);
+        selected.splice(0, selected.length);
       }
       if (selected.length < maximum) {
         selected.push(image);
