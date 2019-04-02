@@ -32,7 +32,7 @@ class ImageItem extends Component {
       />;
 
     var image = item.node.image;
-   if(image.uri ==="content://media/external/images/media/127738")
+   if(image.uri ==="content://media/external/images/media/127813")
                 {
     return (
       <TouchableOpacity
