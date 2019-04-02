@@ -143,11 +143,11 @@ class CameraRollPicker extends Component {
     const { selected } = this.state;
     const index = arrayObjectIndexOf(selected, 'uri', image.uri);
 
-    if (index >= 0) {
+    if (index > 0) {
       selected.splice(index, 1);
     } else {
       if (selectSingleItem) {
-        selected.splice(0, selected.length);
+        selected.splice(1, selected.length);
       }
       if (selected.length < maximum) {
         selected.push(image);
@@ -193,7 +193,7 @@ class CameraRollPicker extends Component {
     const isSelected = item.map((imageItem) => {
       if (!imageItem) return false;
       const { uri } = imageItem.node.image;
-      return arrayObjectIndexOf(this.state.selected, 'uri', uri) >= 0;
+      return arrayObjectIndexOf(this.state.selected, 'uri', uri) > 0;
     });
     return (<Row
       rowData={item}
