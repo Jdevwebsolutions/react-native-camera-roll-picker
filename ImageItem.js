@@ -43,7 +43,7 @@ class ImageItem extends Component {
           style={{ height: this._imageSize, width: this._imageSize }} />
         {(selected) ? marker :   <Image
           style={[styles.marker, { width: 25, height: 25 }]}
-          source={require('../../Assets/Icons/t2.png')}
+          source={require('../../Assets/Icons/t1.png')}
         />}
       </TouchableOpacity>
     );
@@ -59,7 +59,7 @@ class ImageItem extends Component {
           style={{ height: this._imageSize, width: this._imageSize }} />
         {(selected) ? marker :   <Image
           style={[styles.marker, { width: 25, height: 25 }]}
-          source={require('../../Assets/Icons/t2.png')}
+          source={require('../../Assets/Icons/t1.png')}
         />}
       </TouchableOpacity>
     );}
