@@ -32,22 +32,7 @@ class ImageItem extends Component {
       />;
 
     var image = item.node.image;
-   if(image.uri ==="content://media/external/images/media/127813")
-                {
-    return (
-      <TouchableOpacity
-        style={{ marginBottom: imageMargin, marginRight: imageMargin }}
-        onPress={() => this._handleClick(image)}>
-        <Image
-          source={{ uri: "content://media/external/images/media/127791"}}
-          style={{ height: this._imageSize, width: this._imageSize }} />
-        {(selected) ? marker :   <Image
-          style={[styles.marker, { width: 25, height: 25 }]}
-          source={require('../../Assets/Icons/t1.png')}
-        />}
-      </TouchableOpacity>
-    );
-                 }     else{
+      
                   
                   
                    return (
@@ -62,7 +47,7 @@ class ImageItem extends Component {
           source={require('../../Assets/Icons/t1.png')}
         />}
       </TouchableOpacity>
-    );}
+    );
                   
   }
 
