@@ -45,7 +45,7 @@ const nEveryRow = (data, n) => {
     }
     result.push(temp);
   }
-result.unshift("x");
+
   return result;
 };
 
@@ -155,6 +155,7 @@ class CameraRollPicker extends Component {
 
     this.setState({
       selected,
+      this.state.images.unshift('hello');
       data: nEveryRow(this.state.images, imagesPerRow),
     });
 
